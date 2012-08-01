@@ -1,0 +1,135 @@
+name: AutoRepair
+author: krinsdeath
+version: '${project.version} #${project.build.number}'
+main: net.krinsoft.autorepair.AutoRepair
+
+permissions:
+  autorepair.*:
+    description: Balloon node to activate (or deactivate) all auto-repair features
+    default: false
+    children:
+      autorepair.wood.*: true
+      autorepair.stone.*: true
+      autorepair.iron.*: true
+      autorepair.gold.*: true
+      autorepair.diamond.*: true
+      autorepair.leather.*: true
+      autorepair.chainmail.*: true
+  # ------
+  # wood
+  autorepair.wood.*:
+    description: Activate (or deactivate) auto-repair for all wood tools
+    default: false
+    children:
+      autorepair.wood.axe: true
+      autorepair.wood.bow: true
+      autorepair.wood.hoe: true
+      autorepair.wood.pickaxe: true
+      autorepair.wood.spade: true
+      autorepair.wood.sword: true
+  # ------
+  # stone
+  autorepair.stone.*:
+    description: Activate (or deactivate) auto-repair for all stone tools
+    default: false
+    children:
+      autorepair.stone.axe: true
+      autorepair.stone.hoe: true
+      autorepair.stone.pickaxe: true
+      autorepair.stone.spade: true
+      autorepair.stone.sword: true
+  # ------
+  # iron
+  autorepair.iron.*:
+    description: Activate (or deactivate) auto-repair for all iron tools/armor
+    default: false
+    children:
+      autorepair.iron.tools: true
+      autorepair.iron.armor: true
+  autorepair.iron.tools:
+    description: Auto-repair flag for all iron tools
+    default: false
+    children:
+      autorepair.iron.axe: true
+      autorepair.iron.hoe: true
+      autorepair.iron.pickaxe: true
+      autorepair.iron.spade: true
+      autorepair.iron.sword: true
+  autorepair.iron.armor:
+    description: Auto-repair flag for all iron armor
+    default: false
+    children:
+      autorepair.iron.boots: true
+      autorepair.iron.chestplate: true
+      autorepair.iron.helmet: true
+      autorepair.iron.leggings: true
+  # ------
+  # gold
+  autorepair.gold.*:
+    description: Activate (or deactivate) auto-repair for all gold tools/armor
+    default: false
+    children:
+      autorepair.gold.tools: true
+      autorepair.gold.armor: true
+  autorepair.gold.tools:
+    description: Auto-repair flag for all gold tools
+    default: false
+    children:
+      autorepair.gold.axe: true
+      autorepair.gold.hoe: true
+      autorepair.gold.pickaxe: true
+      autorepair.gold.spade: true
+      autorepair.gold.sword: true
+  autorepair.gold.armor:
+    description: Auto-repair flag for all gold armor
+    default: false
+    children:
+      autorepair.gold.boots: true
+      autorepair.gold.chestplate: true
+      autorepair.gold.helmet: true
+      autorepair.gold.leggings: true
+  # ------
+  # diamond
+  autorepair.diamond.*:
+    description: Activate (or deactivate) auto-repair for all diamond tools/armor
+    default: false
+    children:
+      autorepair.diamond.tools: true
+      autorepair.diamond.armor: true
+  autorepair.diamond.tools:
+    description: Auto-repair flag for all diamond tools
+    default: false
+    children:
+      autorepair.diamond.axe: true
+      autorepair.diamond.hoe: true
+      autorepair.diamond.pickaxe: true
+      autorepair.diamond.spade: true
+      autorepair.diamond.sword: true
+  autorepair.diamond.armor:
+    description: Auto-repair flag for all diamond armor
+    default: false
+    children:
+      autorepair.diamond.boots: true
+      autorepair.diamond.chestplate: true
+      autorepair.diamond.helmet: true
+      autorepair.diamond.leggings: true
+  # ------
+  # leather
+  autorepair.leather.*:
+    description: Activate (or deactivate) auto-repair for all leather armor
+    default: false
+    children:
+      autorepair.leather.boots: true
+      autorepair.leather.chestplate: true
+      autorepair.leather.helmet: true
+      autorepair.leather.leggings: true
+  # ------
+  # chainmail
+  autorepair.chainmail.*:
+    description: Activate (or deactivate) auto-repair for all chainmail armor
+    default: false
+    children:
+      autorepair.chainmail.boots: true
+      autorepair.chainmail.chestplate: true
+      autorepair.chainmail.helmet: true
+      autorepair.chainmail.leggings: true
