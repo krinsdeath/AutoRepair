@@ -1,13 +1,12 @@
 package net.krinsoft.autorepair.listeners;
 
 import net.krinsoft.autorepair.util.Parser;
-import org.bukkit.Material;
 import org.bukkit.entity.Player;
-import org.bukkit.entity.Sheep;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
-import org.bukkit.event.player.PlayerInteractEntityEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
+import org.bukkit.event.player.PlayerItemBreakEvent;
+import org.bukkit.inventory.ItemStack;
 
 /**
  *
@@ -16,7 +15,7 @@ import org.bukkit.event.player.PlayerInteractEvent;
 @SuppressWarnings("unused")
 public class PlayerListener implements Listener {
 
-    @EventHandler
+    //@EventHandler
     void playerInteract(PlayerInteractEvent event) {
         // make sure the event isn't canceled
         if (event.isCancelled()) { return; }
@@ -30,6 +29,21 @@ public class PlayerListener implements Listener {
             if (tool != null && type != null && player.hasPermission("autorepair." + type + "." + tool)) {
                 player.getItemInHand().setDurability((short) 0);
             }
+        }
+    }
+
+    @EventHandler
+    void itemBreak(PlayerItemBreakEvent event) {
+        Player player = event.getPlayer();
+        if (player == null) { return; }
+        ItemStack item = event.getBrokenItem();
+        if (item == null) { return; }
+        String tool = Parser.getTool(item.getType().name());
+        String type = Parser.getType(item.getType().name());
+        if (tool != null && type != null && player.hasPermission("autorepair." + type + "." + tool)) {
+            item.setDurability((short) 0);
+            item.setAmount(item.getAmount() + 1);
+            player.updateInventory();
         }
     }
 

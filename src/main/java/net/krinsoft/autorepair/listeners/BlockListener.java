@@ -3,7 +3,6 @@ package net.krinsoft.autorepair.listeners;
 import net.krinsoft.autorepair.util.Parser;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
-import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockBreakEvent;
 
@@ -14,7 +13,7 @@ import org.bukkit.event.block.BlockBreakEvent;
 @SuppressWarnings("unused")
 public class BlockListener implements Listener {
 
-    @EventHandler
+    //@EventHandler
     public void blockBreak(BlockBreakEvent event) {
         // make sure the event isn't canceled
         if (event.isCancelled()) { return; }

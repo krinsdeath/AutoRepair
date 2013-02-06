@@ -25,6 +25,10 @@ public class Parser {
         if (input.contains("PICKAXE")) { return "pickaxe"; }
         if (input.contains("AXE")) { return "axe"; }
         if (input.contains("SHEARS")) { return "shears"; }
+        if (input.contains("HELMET")) { return "helmet"; }
+        if (input.contains("CHESTPLATE")) { return "chestplate"; }
+        if (input.contains("LEGGINGS")) { return "leggings"; }
+        if (input.contains("BOOTS")) { return "boots"; }
         return null;
     }
 

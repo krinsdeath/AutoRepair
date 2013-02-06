@@ -3,7 +3,6 @@ package net.krinsoft.autorepair.listeners;
 import net.krinsoft.autorepair.util.Parser;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
-import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.event.entity.EntityDamageEvent;
@@ -15,7 +14,7 @@ import org.bukkit.event.entity.EntityDamageEvent;
 @SuppressWarnings("unused")
 public class EntityListener implements Listener {
 
-    @EventHandler
+    //@EventHandler
     void entityDamage(EntityDamageEvent event) {
         // make sure the event isn't canceled
         if (event.isCancelled()) { return; }
