@@ -5,12 +5,12 @@
     <groupId>net.krinsoft</groupId>
     <artifactId>AutoRepair</artifactId>
     <packaging>jar</packaging>
-    <version>1.2</version>
+    <version>1.4</version>
     <name>AutoRepair</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.build.number>10</project.build.number>
+        <project.build.number>15</project.build.number>
     </properties>
 
     <repositories>
@@ -53,7 +53,7 @@
         <dependency>
             <groupId>org.bukkit</groupId>
             <artifactId>bukkit</artifactId>
-            <version>1.4.7-R1.0</version>
+            <version>1.6.2-R0.1-SNAPSHOT</version>
             <type>jar</type>
         </dependency>
     </dependencies>
